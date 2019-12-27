@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login System Using JS</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-color: #eee;
+        }
+        .container{
+            background-color: rgb(255, 196, 0);
+            color: rgb(255, 196, 0);
+            margin: 60px 350px 0 350px;
+            padding: 20px 40px 20px 40px;
+            text-align: center;
+            border-radius: 15px;
+        }
+        .container input{
+            width: 40%;
+            height: 30px;
+            text-align: center;
+            font-size: large;
+            font-weight: 600;
+            border-radius: 40px;
+        }
+        .container input[type="button"]{
+            background-color: rgb(255, 153, 0);
+            color: #fff;
+            padding: 12px 0 27px 0;
+            text-align: center;
+            
+        }
+        .container input[type="button"]:hover{
+            background-color: #fff;
+            color: rgb(255, 196, 0);
+            border: 2px solid rgb(255, 196, 0);
+            cursor: pointer;
+        }
+        h3{
+            color:  rgb(255, 196, 0);
+            text-align: center;
+            margin-top: 75px;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        footer{
+            background-color:rgb(255, 196, 0);
+            color: #fff;
+            text-align: center;
+            width: auto;
+            height: 60px;
+            padding-top: 20px;
+            margin-top: 250px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h3>Please Login</h3>
+<div class="container">
+    
+    <form action="index.php" method="get">
+        <input type="text" name="username" id="user" placeholder="Enter your Username"><br><br>
+        <input type="password" name="password" id="pass" placeholder="Enter your Password"><br><br>
+       <a href="#" id="log"><input type="button" value="Login" onclick="add();"></a>
+    
+    </form>
+    
+    </div>
+    <footer>
+        &copy Nabature e-Systems 2019.
+    </footer>
+
+    <script>
+        function add(){
+         var x =  document.getElementById('user').value;//formData.get("username");
+         var y =  document.getElementById('pass').value;//formData.get("password");
+        //parseInt(x);
+        //parseInt(y);
+       // var z = x+y;
+        //document.write(z);
+        if(x && y== "admin"){
+            document.getElementById('log').href = "home.html";
+        }
+        else{
+            document.write("<h2>Invalid username/password! <br> please try again!<br><br> Click <a href='index.html'>Here</a> to login Again</h2>");
+        }
+        }
+    </script>
+</body>
+</html>
